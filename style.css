@@ -179,15 +179,24 @@ header>nav>i.fa-bars {
     display: none;
 }
 
+/* adaptation du site web en fonction de l'écran. Ici ont met des conditions pour des largeurs d'écran inférieur à 768px */
+
 /* media query */
 @media screen and (max-width:768px) {
+
+    /* On fait disparaître la liste qui se trouve en en-tête si la largeur de l'écran est < 768px */
+
     header>nav>ul.liste {
         display: none;
     }
 
+    /* on fait apparaître l'icone bars si largeur < 768px  */
+
     header>nav>i.fa-bars {
         display: block;
     }
+
+    /* on dispose le logo, l'icone et la liste et change le fond de l'arrière plan si largeur < 768px */
 
     header>nav.open {
         position: fixed;
@@ -199,6 +208,8 @@ header>nav>i.fa-bars {
 
     }
 
+    /* on dispose la liste en colonne et change le fond de l'arrière plan si largeur < 768px */
+
     header>nav.open>ul.liste {
         flex-direction: column;
         justify-content: space-around;
@@ -208,18 +219,26 @@ header>nav>i.fa-bars {
 
 }
 
+/* défilement de la page web */
+
 * {
     scroll-behavior: smooth;
 }
+
+/* couleur de fond de l'entête et du pied de page */
 
 header,
 footer {
     background-color: rgb(237, 237, 233);
 }
 
+/* taille de mon logo */
+
 div#logo>img {
     height: 80px;
 }
+
+/* bordure lorsque l'onglet accueil est ouvert */
 
 .Accueil {
     border: 3px solid rgb(214, 204, 194);
@@ -229,6 +248,8 @@ div#logo>img {
     display: inline;
 }
 
+/* bordure lorsque l'onglet à propos est ouvert */
+
 .propos {
     border: 3px solid rgb(214, 204, 194);
     padding: 20px;
@@ -237,19 +258,28 @@ div#logo>img {
     display: inline;
 }
 
+/* mise en couleur du texte de mon en-tête */
+
 header>nav>ul>li>a {
     color: darkred;
 }
+
+/* mise en page de mon image */
 
 main>#accueil1 {
     display: flex;
     justify-content: flex-end;
 }
 
+/* dimension de mon image */
+
 main>#accueil1>img {
     width: 80%;
     max-width: 100%;
+    z-index: -1;
 }
+
+/* mise en page de ma page principale */
 
 main {
     display: grid;
@@ -257,25 +287,30 @@ main {
     align-content: stretch;
 }
 
+/* bordure de ma présentation */
+
+main>.presentation {
+
+    border: 6px ridge rgb(245, 235, 224);
+    margin-left: 40px;
+    width: 56%;
+    height: 140%;
+    background-color: white;
+    top: 40%;
+    position: static;
+
+}
+
+/* titre du bloc présentation de ma page d'acceuil*/
+
 main>.presentation>h1 {
     font-size: 30px;
     font-family: fangsong;
     margin-top: 2%;
-}
-
-main>.presentation {
-    font-size: 30px;
-    font-family: fangsong;
-    border: 6px ridge rgb(245, 235, 224);
-    margin-left: 40px;
-    width: 56%;
-    height: 120%;
-    position: relative;
-    background-color: white;
-    top: 50%;
     text-align: center;
-
 }
+
+/* paragraphe du bloc présentation de ma page d'accueil */
 
 main>.presentation>p {
     font-size: 15px;
@@ -283,5 +318,6 @@ main>.presentation>p {
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 20px;
 
 }
