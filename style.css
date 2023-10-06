@@ -260,19 +260,21 @@ main {
 main>.presentation>h1 {
     font-size: 30px;
     font-family: fangsong;
+    margin-top: 2%;
 }
 
 main>.presentation {
     font-size: 30px;
     font-family: fangsong;
     border: 6px ridge rgb(245, 235, 224);
-    margin-left: 30px;
-    width: 600px;
-    height: 200px;
+    margin-left: 40px;
+    width: 56%;
+    height: 120%;
     position: relative;
     background-color: white;
-    top: 100px;
+    top: 50%;
     text-align: center;
+
 }
 
 main>.presentation>p {
