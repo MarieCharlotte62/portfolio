@@ -145,7 +145,7 @@ main,
 footer {
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(203, 153, 126);
+    border-color: rgb(227, 213, 202);
     padding: 5px;
 }
 
@@ -170,6 +170,9 @@ header>nav>ul.liste {
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
+    font-family: system-ui;
+    text-transform: uppercase;
+
 }
 
 header>nav>i.fa-bars {
@@ -202,16 +205,81 @@ header>nav>i.fa-bars {
         display: block;
         display: flex;
     }
+
 }
 
 * {
     scroll-behavior: smooth;
 }
 
-header {
-    background-color: rgb(255, 232, 214);
+header,
+footer {
+    background-color: rgb(237, 237, 233);
 }
 
 div#logo>img {
-    height: 100px;
+    height: 80px;
+}
+
+.Accueil {
+    border: 3px solid rgb(214, 204, 194);
+    padding: 20px;
+    border-radius: 10%;
+    background: white;
+    display: inline;
+}
+
+.propos {
+    border: 3px solid rgb(214, 204, 194);
+    padding: 20px;
+    border-radius: 10%;
+    background: white;
+    display: inline;
+}
+
+header>nav>ul>li>a {
+    color: darkred;
+}
+
+main>#accueil1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main>#accueil1>img {
+    width: 80%;
+    max-width: 100%;
+}
+
+main {
+    display: grid;
+    justify-content: end;
+    align-content: stretch;
+}
+
+main>.presentation>h1 {
+    font-size: 30px;
+    font-family: fangsong;
+}
+
+main>.presentation {
+    font-size: 30px;
+    font-family: fangsong;
+    border: 6px ridge rgb(245, 235, 224);
+    margin-left: 30px;
+    width: 600px;
+    height: 200px;
+    position: relative;
+    background-color: white;
+    top: 100px;
+    text-align: center;
+}
+
+main>.presentation>p {
+    font-size: 15px;
+    font-family: math;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
