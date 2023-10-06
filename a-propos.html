@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>MarieCharlotte | a propos</title>
+    <title>MarieCharlotte | à propos</title>
     <script>
-function openMenu() {
-    let nav = document.querySelector("nav")
-    nav.classList.toggle("open")
-}
+        function openMenu() {
+            let nav = document.querySelector("nav")
+            nav.classList.toggle("open")
+        }
     </script>
+
 </head>
 
 <body>
@@ -24,29 +25,29 @@ function openMenu() {
     <header>
         <nav>
             <!-- id c'est unique (1 seul par page) -->
-            <div id="logo">LOGO</div>
+            <div id="logo"><img src="logo.png"></div>
             <i onclick="openMenu()" class="fa-solid fa-bars"></i>
             <ul class="liste">
                 <!-- plusieurs classes possibles -->
                 <li>
-                    <a href="http://127.0.0.1:5500/a-propos.html">a propos</a>
+                    <a href="http://127.0.0.1:5500/index.html">Accueil</a>
                 </li>
                 <li>
                     <a href="#">Expériences</a>
                 </li>
                 <li>
-                    <a href="#">Projets</a>
+                    <a href="http://127.0.0.1:5500/a-propos.html"> <span class="propos">À Propos</span></a>
                 </li>
             </ul>
         </nav>
     </header>
     <!-- contenu principal changeant à chaque page -->
     <main>
-        test
+
     </main>
     <!-- notre pied de page -->
     <footer>
-        footer
+
     </footer>
 </div>
 
