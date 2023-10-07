@@ -307,3 +307,19 @@ header>nav>ul>li>a {
     padding: 20px;
 
 }
+
+main>.bloc2 {
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+    width: 16%;
+    margin-left: 3%;
+    margin-top: 3%;
+    height: 80%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 180%;
+    font-family: system-ui;
+    color: darkred;
+
+}
