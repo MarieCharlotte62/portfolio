@@ -266,25 +266,31 @@ header>nav>ul>li>a {
 
 /* dimension de mon image */
 
-main>#accueil1>img {
+.bloc1>#accueil1>img {
+    left: 29%;
     max-width: 100%;
+    width: 70%;
+    position: absolute;
+    top: 20%;
 }
 
 /* bordure de ma présentation */
 
-main>.presentation {
-
+.bloc1>.presentation {
     border: 6px ridge rgb(245, 235, 224);
-    margin-left: 10px;
-    width: 50%;
+    margin-left: 20%;
+    width: 20%;
     background-color: white;
-
+    position: absolute;
+    z-index: 1;
+    height: 60%;
+    top: 18%;
 }
 
 /* titre du bloc présentation de ma page d'acceuil*/
 
-main>.presentation>h1 {
-    font-size: 30px;
+.bloc1>.presentation>h1 {
+    font-size: 20px;
     font-family: fangsong;
     margin-top: 2%;
     text-align: center;
@@ -292,8 +298,8 @@ main>.presentation>h1 {
 
 /* paragraphe du bloc présentation de ma page d'accueil */
 
-main>.presentation>p {
-    font-size: 15px;
+.bloc1>.presentation>p {
+    font-size: 12px;
     font-family: math;
     text-align: justify;
     margin-left: 20px;
