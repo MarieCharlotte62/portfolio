@@ -135,10 +135,6 @@ table {
     border-spacing: 0;
 }
 
-
-
-
-
 /* mon commentaire */
 header,
 main,
@@ -282,7 +278,7 @@ main {
     display: grid;
     align-items: center;
     justify-content: space-between;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 8fr;
 }
 
 main>.bloc1 {
@@ -346,5 +342,11 @@ main>.bloc2>h2 {
 
 main>.bloc2 {
     height: 100%;
-    display: contents;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main>.bloc2>.baniere1>img {
+    width: 100%;
 }
