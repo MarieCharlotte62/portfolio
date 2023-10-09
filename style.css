@@ -225,13 +225,14 @@ header>nav>i.fa-bars {
 
 header,
 footer {
-    background-image: linear-gradient(45deg, rgb(214, 204, 194), transparent);
+    background-image: linear-gradient(45deg, rgb(237, 237, 233), transparent);
 }
 
 /* taille de mon logo */
 
 div#logo>img {
     height: 80px;
+    margin-left: 20%;
 }
 
 /* bordure lorsque l'onglet accueil est ouvert */
@@ -271,82 +272,26 @@ header>nav>ul>li>a {
     color: darkred;
 }
 
-
-/* mise en page de la page d'accueil en 2 blocs */
-
-main {
+main>.pageaccueil {
     display: grid;
-    align-items: center;
-    justify-content: space-between;
-    grid-template-rows: 1fr 8fr;
-}
-
-main>.bloc1 {
-    display: flex;
+    grid-template-columns: 2fr 1fr;
     height: 100%;
 }
 
-main>.bloc1>.accueil1 {
-    margin-left: 2%;
-    margin-right: 2%;
+main>.pageaccueil>.accueil1>img {
+    width: 80%;
+    margin-left: 10%;
+
 }
 
-/* dimension de mon image et positionnement */
-
-main>.bloc1>.accueil1>img {
-    width: 100%;
+main>.pageaccueil>.bienvenue>img {
+    transform: translate(-235px, 50px);
+    width: 60%;
     max-width: 100%;
-    margin-top: 3%;
-    border: 6px ridge rgb(245, 235, 224);
+    margin-left: 45%;
+    transform: translate(0px, 50px);
 }
 
-/* bordure de ma présentation */
-
-.bloc1>.presentation {
-    border: 6px ridge rgb(245, 235, 224);
-    background-color: white;
-    height: 60%;
-    margin-top: 2%;
-    margin-left: 2%;
-
-}
-
-/* titre du bloc présentation de ma page d'acceuil*/
-
-.bloc1>.presentation>h1 {
-    font-size: 20px;
-    font-family: fangsong;
-    margin-top: 2%;
-    text-align: center;
-}
-
-/* paragraphe du bloc présentation de ma page d'accueil */
-
-.bloc1>.presentation>p {
-    font-size: 12px;
-    font-family: math;
-    text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-
-}
-
-main>.bloc2>h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 180%;
-    color: darkred;
-    text-align: center;
-    letter-spacing: 10px;
-}
-
-main>.bloc2 {
-    height: 100%;
+main>.pageaccueil>.bloc1 {
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-main>.bloc2>.baniere1>img {
-    width: 100%;
 }
