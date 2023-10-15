@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>MarieCharlotte | accueil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <script>
         function openMenu() {
             let nav = document.querySelector("nav")
             nav.classList.toggle("open")
         }
-
     </script>
-
 </head>
 
 <body>
@@ -25,14 +29,11 @@
     <!-- le header qui contient notre entête de site (logo, nav etc) -->
     <header>
         <nav>
-            <!-- id c'est unique (1 seul par page) -->
             <div id="logo"><img src="logo.png"></div>
             <i onclick="openMenu()" class="fa-solid fa-bars"></i>
             <ul class="liste">
-                <!-- plusieurs classes possibles -->
-
                 <li>
-                    <a href="http://127.0.0.1:5500/accueil.html"><span class="Accueil">Accueil</span></a>
+                    <a href="http://127.0.0.1:5500/index.html"><span class="Accueil">Accueil</span></a>
                 </li>
                 <li>
                     <a href="http://127.0.0.1:5500/experiences.html"> Expériences</a>
@@ -43,40 +44,30 @@
             </ul>
         </nav>
     </header>
-    <!-- contenu principal changeant à chaque page -->
+
     <main>
 
-        <section class="pageaccueil">
+        <section class="page-accueil">
 
-            <div class="bloc1">
+            <h2 class="message-bienvenue">Bienvenue sur ma page portfolio</h2>
+            <div class="metier">
 
-                <div class="bienvenue">
-
-                    <img src="bienvenue.png">
-
+                <img src="pageaccueil2.png" alt="image développeuse web">
+                
+                <div class="texte-metier">
+                    <h1>Développeuse</h1>
+                    <hr>
+                    <h2 class="couleur-web">Web</h2>
+                    <h2>And</h2>
+                    <h2 class="couleur-web">Web Mobile</h2>
+                    <hr>
                 </div>
-
-                <div class="accueil1">
-
-                    <img src="accueil1.png">
-
-                </div>
-
-            </div>
-
-            <div class="bloc2">
-
-                <p>Développeuse Web</p>
 
             </div>
 
         </section>
 
     </main>
-    <!-- notre pied de page -->
-    <footer>
-
-    </footer>
 </div>
 
 </html>
