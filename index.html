@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>MarieCharlotte | accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <script>
-        function openMenu() {
-            let nav = document.querySelector("nav")
-            nav.classList.toggle("open")
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <script type="text/Javascript" src="index.js"></script>
 </head>
 
 <body>
 
-</body>
-
-<div id="container">
-    <!-- le header qui contient notre entête de site (logo, nav etc) -->
     <header>
-        <nav>
-            <div id="logo"><img src="logo.png"></div>
-            <i onclick="openMenu()" class="fa-solid fa-bars"></i>
-            <ul class="liste">
-                <li>
-                    <a href="http://127.0.0.1:5500/index.html"><span class="Accueil">Accueil</span></a>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:5500/experiences.html"> Expériences</a>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:5500/a-propos.html">À propos</a>
-                </li>
-            </ul>
-        </nav>
+
+        <div class="navigation">
+            
+                <div class="logo">
+                    <img src="img/logo.png" alt="mon logo">
+                </div>
+
+                <input type="checkbox" id="sommaire">
+                <label for="sommaire"><i class="fa-solid fa-bars" style="color: #832f25;"></i></label>
+
+                <nav>
+                    <ul>
+                        <li class="lien-accueil"><a href="http://127.0.0.1:5500/index.html">Accueil</a></li>
+                        <li class="lien-a-propos"><a href="#">À-propos</a></li>
+                        <li class="lien-experiences"><a href="#">Expériences</a></li>
+                    </ul>
+                </nav>
+        </div>
+
     </header>
 
     <main>
-
-        <section class="page-accueil">
-
-            <h2 class="message-bienvenue">Bienvenue sur ma page portfolio</h2>
-            <div class="metier">
-
-                <img src="pageaccueil2.png" alt="image développeuse web">
-                
-                <div class="texte-metier">
-                    <h1>Développeuse</h1>
-                    <hr>
-                    <h2 class="couleur-web">Web</h2>
-                    <h2>And</h2>
-                    <h2 class="couleur-web">Web Mobile</h2>
-                    <hr>
-                </div>
-
+        <div class="page-accueil">
+            <div class="image-accueil">
+                <img src="img/accueil.png" alt="développeuse web">
+                <h2 class="message-bienvenue">Bienvenue sur ma page portfolio</h2>
             </div>
 
-        </section>
-
+            <div class="metier">
+            <h1>Développeuse<hr><span>Web </span>And <span>Web Mobile</span><hr></h1>
+            </div>
+        </div>
     </main>
-</div>
-
+    
+</body>
 </html>
