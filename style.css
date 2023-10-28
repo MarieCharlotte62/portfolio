@@ -140,11 +140,13 @@ table {
 body {
     display: grid;
     grid-template-rows: 1fr 8fr;
-    height: 100vh;
+    height: 99.7vh;
 }
 
 header {
     background-color: #CAC0AD;
+    position: fixed;
+    width: 100%;
 }
 .navigation {
     display: flex;
@@ -198,8 +200,30 @@ header {
     border-radius: 10px;
 }
 
+.navigation nav ul .lien-a-propos a:hover,
+.navigation nav ul .lien-experiences a:hover {
+    background-color:white;
+    font-weight: 100;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navigation nav ul .lien-a-propos a:active,
+.navigation nav ul .lien-experiences a:active {
+    background-color: #832F25;
+    color: white;
+    font-weight: 100;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 main {
     z-index: -10;
+    display: flex;
+    flex-direction: column;
+    height: 180vh;
+    margin-top: 10vh;
 }
 
 main .page-accueil {
@@ -207,15 +231,17 @@ main .page-accueil {
     justify-content: space-between;
     align-items: center;
     margin: 0 40px;
+    height: 90vh;
+    max-height: 100%;
 }
 
 main .page-accueil .image-accueil {
     position: relative;
-    padding: 1px 0;
+    height: 100%;
 }
 
 main .page-accueil .image-accueil img {
-    height: 88vh;
+    height: 100%;
     width: 100%;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
@@ -250,6 +276,27 @@ main .page-accueil .metier span {
     text-transform: uppercase;
 }
 
+@keyframes ApparitionTexte {
+0% {
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+
+}
+
+.metier,
+.page-accueil .image-accueil .message-bienvenue {
+    animation: ApparitionTexte 3s ease-in-out;
+  }
+
+main #page_a_propos {
+    height: 90vh;
+}
+  
+
 @media screen and (max-width:780px) {
 
 .navigation {
@@ -265,8 +312,26 @@ main .page-accueil .metier span {
     height: 100%;
     width: 100%;
     transition: 1s;
-    top: 11%;
+    top: 9.5%;
     background-color: #F5EBE0;
+}
+
+.navigation nav ul .lien-a-propos a:hover,
+.navigation nav ul .lien-experiences a:hover {
+    background-color:white;
+    font-weight: 100;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navigation nav ul .lien-a-propos a:active,
+.navigation nav ul .lien-experiences a:active {
+    background-color: #832F25;
+    color: white;
+    font-weight: 100;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 label {
@@ -289,22 +354,37 @@ label i {
     height: 100%;
     width: 100%;
     transition: all 1s;
-    top:11%;
+    top:9.5%;
     background-color: #F5EBE0;
 }
 
 main .page-accueil {
     display: block;
-    height: 89vh;
     margin: 0;
 }
 
 main .page-accueil .metier {
     font-size: 2rem;
-    position: fixed;
+    position: absolute;
     top: 50%;
     right: 50px;
 }
+
+@keyframes ApparitionTexte {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+    
+    }
+    
+    .metier,
+    .page-accueil .image-accueil .message-bienvenue {
+        animation: ApparitionTexte 3s ease-in-out;
+      }
 
 main .page-accueil .image-accueil img {
     clip-path: none;
