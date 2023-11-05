@@ -137,6 +137,10 @@ table {
 
 /* début de CSS */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-rows: 1fr 8fr;
@@ -218,11 +222,31 @@ header {
     border-radius: 10px;
 }
 
+/* SCROLL page à propos */
+.lien-accueil-hover:hover {
+    background-color:white;
+    font-weight: 100;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+}
+.lien-a-propos-no-hover {
+    pointer-events: none;
+}
+.navigation nav ul .lien-a-propos-a-active {
+    background-color: #832F25;
+    color: white;
+    font-weight: 100;
+    padding: 10px;
+    border-radius: 10px;
+}
+/* FIN SCROLL */
+
 main {
     z-index: -10;
     display: flex;
     flex-direction: column;
-    height: 180vh;
+    height: 180.4vh;
     margin-top: 10vh;
 }
 
@@ -390,5 +414,42 @@ main .page-accueil .image-accueil img {
     clip-path: none;
 }
 
-
 }
+
+/* début page à propos */
+
+#page_a_propos {
+    display: flex;
+}
+
+#page_a_propos .presentation {
+    width: 50%;
+}
+
+#page_a_propos .presentation p {
+    border: 3px solid #832F25;
+    font-family: 'Archivo Narrow', sans-serif;
+    text-align: justify;
+    padding: 10px;
+    height: 60vh;
+    width: 70%;
+    margin-top: 60px;
+    margin-left: 15%;
+}
+
+#page_a_propos .about_me {
+    position: relative;
+    width: 50%;
+}
+
+/* #page_a_propos .about_me img {
+height: 100%;
+clip-path: polygon(5% 100%, 95% 100%, 95% 100%, 5% 0, 95% 0);
+} */
+
+#page_a_propos .about_me h2 {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+/* fin page à propos */
