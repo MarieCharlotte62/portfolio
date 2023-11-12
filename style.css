@@ -144,13 +144,14 @@ html {
 body {
     display: grid;
     grid-template-rows: 1fr 8fr;
-    height: 99.7vh;
+    height: 100vh;
 }
 
 header {
     background-color: #CAC0AD;
     position: fixed;
     width: 100%;
+    height: 10vh;
 }
 .navigation {
     display: flex;
@@ -181,6 +182,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    top: 10vh;
 }
 
 .navigation nav ul li {
@@ -221,26 +223,6 @@ header {
     padding: 10px;
     border-radius: 10px;
 }
-
-/* SCROLL page à propos */
-.lien-accueil-hover:hover {
-    background-color:white;
-    font-weight: 100;
-    font-weight: 800;
-    padding: 10px;
-    border-radius: 10px;
-}
-.lien-a-propos-no-hover {
-    pointer-events: none;
-}
-.navigation nav ul .lien-a-propos-a-active {
-    background-color: #832F25;
-    color: white;
-    font-weight: 100;
-    padding: 10px;
-    border-radius: 10px;
-}
-/* FIN SCROLL */
 
 main {
     z-index: -10;
@@ -320,6 +302,61 @@ main #page_a_propos {
     height: 90vh;
 }
   
+/* début page à propos */
+
+#page_a_propos {
+    display: flex;
+}
+
+#page_a_propos .presentation {
+    width: 50%;
+}
+
+#page_a_propos .presentation p {
+    border: 3px solid #832F25;
+    font-family: 'Archivo Narrow', sans-serif;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 15%;
+    white-space: pre-line;
+    font-size: 20px;
+    margin-right: 25%;
+    height: 70vh
+}
+
+#page_a_propos .about_me {
+    width: 50%;
+    position: relative;
+}
+
+#page_a_propos .about_me .image_region {
+    background-image: url(img/image-a-propos.png);
+    background-size: 70vh;
+    background-repeat: no-repeat;
+    height: 100%;
+    clip-path: polygon(0 0, 65% 0, 50% 50%, 65% 100%, 0 100%, 15% 50%);
+}
+
+#page_a_propos .about_me .conteneur {
+    clip-path: polygon(100% 15%, 15% 50%, 100% 85%);
+    background-color: #F5EBE0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#page_a_propos .about_me h2 {
+    position: absolute;
+    top: 320px;
+    right: 10%;
+    font-size: 1.5rem;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+}
+/* fin page à propos */
 
 @media screen and (max-width:780px) {
 
@@ -333,10 +370,10 @@ main #page_a_propos {
     flex-direction: column;
     justify-content: space-evenly;
     left: -100%;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     transition: 1s;
-    top: 9.5%;
+    top: 10vh;
     background-color: #F5EBE0;
 }
 
@@ -366,7 +403,7 @@ label {
 }
 
 label i {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 #sommaire:checked ~ nav ul {
@@ -375,10 +412,10 @@ label i {
     flex-direction: column;
     justify-content: space-evenly;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     transition: all 1s;
-    top:9.5%;
+    top:10vh;
     background-color: #F5EBE0;
 }
 
@@ -413,43 +450,24 @@ main .page-accueil .metier {
 main .page-accueil .image-accueil img {
     clip-path: none;
 }
-
 }
 
-/* début page à propos */
-
-#page_a_propos {
-    display: flex;
-}
-
-#page_a_propos .presentation {
-    width: 50%;
-}
-
-#page_a_propos .presentation p {
-    border: 3px solid #832F25;
-    font-family: 'Archivo Narrow', sans-serif;
-    text-align: justify;
+/* SCROLL page à propos JS */
+.lien-accueil-hover:hover {
+    background-color:white;
+    font-weight: 100;
+    font-weight: 800;
     padding: 10px;
-    height: 60vh;
-    width: 70%;
-    margin-top: 60px;
-    margin-left: 15%;
+    border-radius: 10px;
 }
-
-#page_a_propos .about_me {
-    position: relative;
-    width: 50%;
+.lien-a-propos-no-hover {
+    pointer-events: none;
 }
-
-/* #page_a_propos .about_me img {
-height: 100%;
-clip-path: polygon(5% 100%, 95% 100%, 95% 100%, 5% 0, 95% 0);
-} */
-
-#page_a_propos .about_me h2 {
-    position: absolute;
-    top: 50%;
-    right: 10%;
+.navigation nav ul .lien-a-propos-a-active {
+    background-color: #832F25;
+    color: white;
+    font-weight: 100;
+    padding: 10px;
+    border-radius: 10px;
 }
-/* fin page à propos */
+/* FIN SCROLL */ 
