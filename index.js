@@ -1,43 +1,3 @@
-// // NAVIGATION VERS PAGE A PROPOS
-
-// // DÉCLARATION DE MES VARIABLES
-let navBar = document.querySelector(".navigation");
-let navPos = navBar.getBoundingClientRect();
-let pageUne = document.querySelector(".page-accueil")
-let pageDeux = document.querySelector("#page_a_propos");
-let lienpageUne = document.querySelector(".lien-accueil")
-let lienpageUneA = document.querySelector(".lien-accueil a")
-let lienpageDeuxA = document.querySelector(".lien-a-propos a")
-let hashpageUn = lienpageUneA.getAttribute("href")
-let hashpageDeux = lienpageDeuxA.getAttribute("href")
-
-// // LORS DU SROLL, LORSQUE MON HEADER SE TROUVE À UNE CERTAINE POSITION,
-// // ALORS JE CHANGE DE PAGE
-
-window.onscroll = () => {
-
-    if (pageDeux.getBoundingClientRect().top <= navPos.bottom & pageDeux.getBoundingClientRect().bottom >= navPos.bottom) {
-        lienpageUne.classList.remove("lien-accueil");
-        lienpageUneA.classList.add("lien-accueil-hover");
-        lienpageDeuxA.classList.add("lien-a-propos-no-hover");
-        lienpageDeuxA.classList.add("lien-a-propos-a-active");
-        let hashpage = window.location.hash;
-        if (hashpage = hashpageDeux) {
-            window.history.pushState(null, null, hashpageDeux);
-        }
-    } 
-    else if (pageUne.getBoundingClientRect().bottom >= navPos.bottom) {
-        lienpageUne.classList.add("lien-accueil");
-        lienpageUneA.classList.remove("lien-accueil-hover");
-        lienpageDeuxA.classList.remove("lien-a-propos-no-hover");
-        lienpageDeuxA.classList.remove("lien-a-propos-a-active");
-        let hashpage = window.location.hash;
-        if (hashpage = hashpageUn) {
-            window.history.pushState(null, null, hashpageUn);
-        }
-    }
-}
-
 // // CHANGEMENT D'ICONE LORS DE L'OUVERTURE DE MA BARRE DE NAV
 
 let checkBox = document.querySelector("label i")
@@ -52,3 +12,16 @@ checkBox.addEventListener("click", function() {
     isChecked = true;}
 
 })
+
+// // TRANSITION COULEUR BARRE DE NAV
+
+let pageAccueil = document.querySelector(".lien-accueil")
+let pageAPropos = document.querySelector(".lien-a-propos")
+let pageActuelle = document.querySelectorAll("a")
+
+if (pageActuelle[0].baseURI == "http://127.0.0.1:5501/a_propos.html") {
+pageAPropos.classList.add("page-lien-a-propos")
+pageAPropos.classList.remove("lien-a-propos")
+pageAccueil.classList.remove("lien-accueil")
+pageAccueil.classList.add("page-lien-accueil")
+}
