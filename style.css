@@ -299,7 +299,7 @@ main #page_a_propos {
     height: 90vh;
     display: flex;
     justify-content: center;
-    background-color: #f8f7f2;
+    background: linear-gradient(135deg, #503B3D 5%, rgba(0, 0, 0, 0) 0%), linear-gradient(-45deg, #503B3D 25%, rgba(0, 0, 0, 0) 0%)
 }
 
 main #page_a_propos .presentation {
@@ -312,6 +312,7 @@ main #page_a_propos .presentation {
     background-color: #503B3D;
     color: #f8f7f2;
     font-family: 'Archivo Narrow', sans-serif;
+    border-radius: 20px;
 }
 
 main #page_a_propos .presentation p {
@@ -327,6 +328,7 @@ main #page_a_propos .bloc_page_a_propos {
     width: 40vw;
     height: 55vh;
     margin-top: 70px;
+    margin-right: 20vw;
 }
 
 main #page_a_propos .bloc_page_a_propos .titre_photo {
@@ -334,15 +336,15 @@ main #page_a_propos .bloc_page_a_propos .titre_photo {
 }
 
 main #page_a_propos .bloc_page_a_propos .titre_photo .photo {
-    border: solid;
     width: 50vw;
     height: 25vh;
     margin-left: 20px;
     max-width: 15vw;
-    /* background-image: url(img/photo.jpg);
+    background-image: url(img/photo-dessin.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
+    border-radius: 20px;
 }
 main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
     width: 50vw;
@@ -356,20 +358,23 @@ main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 main #page_a_propos .bloc_page_a_propos .redBloc {
     height: 10vh;
     margin-left: 20px;
     margin-top: 15px;
-    background: linear-gradient(45deg, #CAC0AD, #832F25);
+    border-radius: 20px;
+    border: solid #832F25;
+    background-color: #CFAD92;
 }
 
 main #page_a_propos .prenom {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 20vh;
+    height: 15vh;
     margin-left: 20px;
     margin-top: 15px;
     background-color: #F5EBE0;
@@ -378,6 +383,7 @@ main #page_a_propos .prenom {
     font-family: 'Archivo Narrow', sans-serif;
     line-height: initial;
     letter-spacing: 2px;
+    border-radius: 20px;
 }
 
 main #page_a_propos .prenom p {
@@ -385,6 +391,27 @@ margin-left: 20px;
 }
 
 /* fin page à propos */
+
+@media screen and (min-width: 781px) {
+
+    @media screen and (min-height: 500px){
+    main #page_a_propos .presentation {
+        font-size: 1.1rem;
+    }
+    }
+
+    @media screen and (min-height: 800px){
+        main #page_a_propos .presentation {
+            font-size: 1.4rem;
+    }
+    }
+
+    @media screen and (min-height: 1200px){
+        main #page_a_propos .presentation {
+            font-size: 1.6rem;
+    }
+    }
+}
 
 @media screen and (max-width: 780px) {
 
@@ -479,124 +506,6 @@ main .page-accueil .image-accueil img {
     clip-path: none;
 }
 
-/* RESPONSIVE PAGE À PROPOS */
-
-/* main #page_a_propos { 
-    height: 90vh;
-    margin: 50px 30px;
-    display: block;
-}
-
-main #page_a_propos .presentation {
-    width: 100%;
-    height: 70%;
-    text-align: justify;
-    font-size: 1.4rem;
-    padding: 5px;
-    background-color: #503B3D;
-    color: #f8f7f2;
-    font-family: 'Archivo Narrow', sans-serif;
-    margin-top: 0;
-}
-main #page_a_propos .presentation p {
-padding: 0 10%;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo {
-    margin-top: -60px;
-    display: flex;
-    justify-content: center;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo .photo {
-    border: solid;
-    width: 30%;
-    height: 80%;
-    position: absolute;
-    top: -40%;
-    right: 0;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
-    background-color: #CAC0AD;
-    font-size: 2rem;
-    color: #503B3D;
-    font-family: 'Archivo Narrow', sans-serif;
-    text-align: center;
-    width: 80%;
-    height: 15vh;
-}
-
-main #page_a_propos .bloc_page_a_propos .prenom,
-main #page_a_propos .bloc_page_a_propos .redBloc {
-display: none;
-}
-
-main #page_a_propos .bloc_page_a_propos {
-    width: 100%;
-    position: relative;
-} */
-
-/* FIN RESPONSIVE PAGE À PROPOS */
-
-/* main #page_a_propos {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    background-color: #f8f7f2;
-    position: relative;
-}
-
-main #page_a_propos .bloc_page_a_propos {
-    width: 50%;
-    position: absolute;
-    height: 60vh;
-    margin-top: 70px;
-    bottom: 0;
-}
-
-main #page_a_propos .presentation {
-    width: 60vw;
-    height: 70vh;
-    margin-top: 7vh;
-}
-
-main #page_a_propos .bloc_page_a_propos .prenom {
-    display: none;
-}
-
-main #page_a_propos .bloc_page_a_propos .redBloc {
-    width: 38vw;
-    position: absolute;
-    top: 22vh;
-    margin-left: 0;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo {
-    position: relative;
-    height: 35vh;
-    width: 50vw;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
-    height: 10vh;
-    position: absolute;
-    bottom: 0;
-    margin-left: 0;
-    width: 50vw;
-    font-size: 2rem;
-}
-
-main #page_a_propos .bloc_page_a_propos .titre_photo .photo {
-    border: solid;
-    width: 15vw;
-    height: 16vh;
-    position: absolute;
-    right: -5vw;
-    bottom: 5vh;
-    z-index: 1;
-} */
-
 main #page_a_propos {
     position: relative;
 }
@@ -605,6 +514,7 @@ main #page_a_propos .presentation {
     height: 100%;
     margin-top: 0;
     width: 100%;
+    border-radius: 0;
 }
 
 main #page_a_propos .presentation .centrer {
@@ -619,6 +529,7 @@ main #page_a_propos .bloc_page_a_propos {
     position: absolute;
     width: 100vw;
     height: 85vh;
+    margin-right: 0;
 }
 
 main #page_a_propos .bloc_page_a_propos .titre_photo {
@@ -630,7 +541,6 @@ main #page_a_propos .bloc_page_a_propos .titre_photo {
 
 main #page_a_propos .bloc_page_a_propos .titre_photo .photo {
     position: absolute;
-    border: solid;
     max-width: 25vw;
     height: 15vh;
     bottom: 25vh;
@@ -647,9 +557,17 @@ main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
     right: 10vw;
 }
 
-main #page_a_propos .bloc_page_a_propos .redBloc,
 main #page_a_propos .bloc_page_a_propos .prenom{
     display: none;
+}
+
+main #page_a_propos .bloc_page_a_propos .redBloc {
+    position: absolute;
+    top: 43vh;
+    width: 50vw;
+    right: 10vw;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 @media screen and (min-height: 800px) {
@@ -669,4 +587,11 @@ main #page_a_propos .presentation {
         font-size: 2rem;
     }
     }
+
+@media screen and (max-width: 300px){
+    main #page_a_propos .presentation {
+        font-size: 1.1rem;
+    }
+    }
+    
 }
