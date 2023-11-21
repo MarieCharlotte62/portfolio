@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,20 +21,20 @@
     <header>
 
         <div class="navigation">
-            
-                <div class="logo"><img src="img/logo.png" alt="mon logo"></div>
 
-                <input type="checkbox" id="sommaire">
-                <label for="sommaire"><i class="fa-solid fa-bars" style="color: #832f25;"></i></label>
+            <div class="logo"><img src="img/logo.png" alt="mon logo"></div>
 
-                <nav>
-                    <ul>
-                        <li id="page_principale" class="lien-accueil"><a href="http://127.0.0.1:5501/index.html#">Accueil</a></li>
-                        <li class="lien-a-propos"><a href="http://127.0.0.1:5501/a_propos.html">À-propos</a></li>
-                        <li class="lien-experiences"><a href="#">Expériences</a></li>
-                    </ul>
-                </nav>
-        </div> 
+            <input type="checkbox" id="sommaire">
+            <label for="sommaire"><i class="fa-solid fa-bars" style="color: #832f25;"></i></label>
+
+            <nav>
+                <ul>
+                    <li id="page_principale" class="lien-accueil"><a href="index.php">Accueil</a></li>
+                    <li class="lien-a-propos"><a href="a_propos.php">À-propos</a></li>
+                    <li class="lien-experiences"><a href="#">Expériences</a></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 
@@ -49,11 +50,17 @@
 
             </div>
 
-            <div class="metier"><h1>Développeuse<hr><span>Web </span>And <span>Web Mobile</span><hr></h1></div>
+            <div class="metier">
+                <h1>Développeuse
+                    <hr><span>Web </span>And <span>Web Mobile</span>
+                    <hr>
+                </h1>
+            </div>
 
         </div>
-        
+
     </main>
 
 </body>
+
 </html>

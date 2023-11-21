@@ -149,6 +149,7 @@ body {
 
 header {
     background-color: #CAC0AD;
+    z-index: 10;
 }
 
 .navigation {
@@ -224,7 +225,7 @@ header {
 }
 
 main {
-    z-index: -10;
+    z-index: 0;
 }
 
 main .page-accueil {
@@ -362,13 +363,31 @@ main #page_a_propos .bloc_page_a_propos .titre_photo .titre {
 }
 
 main #page_a_propos .bloc_page_a_propos .redBloc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 10vh;
     margin-left: 20px;
     margin-top: 15px;
     border-radius: 20px;
     border: solid #832F25;
     background-color: #CFAD92;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #503B3D;
+    font-size: 1.7rem;
 }
+
+main #page_a_propos .bloc_page_a_propos .redBloc:hover {
+background-color: #f8f7f2;
+cursor: pointer;
+}
+
+main #page_a_propos .bloc_page_a_propos .redBloc i {
+    color: #832f25;
+    font-size: 1.7rem;
+    margin-right: 5px;
+}
+
 
 main #page_a_propos .prenom {
     display: flex;
