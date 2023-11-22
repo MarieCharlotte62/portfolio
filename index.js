@@ -1,4 +1,4 @@
-// // CHANGEMENT D'ICONE LORS DE L'OUVERTURE DE MA BARRE DE NAV
+// // CHANGEMENT D'ICONE LORS DE L'OUVERTURE DE MA BARRE DE NAVIGATION
 
 let checkBox = document.querySelector("label i")
 let isChecked = false;
@@ -10,16 +10,15 @@ checkBox.addEventListener("click", function() {
     else {
     checkBox.className = "fa-solid fa-xmark"
     isChecked = true;}
-
 })
 
 // // TRANSITION COULEUR BARRE DE NAV
 
 let pageAccueil = document.querySelector(".lien-accueil")
 let pageAPropos = document.querySelector(".lien-a-propos")
-let pageActuelle = document.querySelectorAll("a")
+let pageActuelle = window.location.href;
 
-if (pageActuelle[0].baseURI == "http://localhost:4000/a_propos.php") {
+if (pageActuelle == "http://localhost:4000/a_propos.php") {
 pageAPropos.classList.add("page-lien-a-propos")
 pageAPropos.classList.remove("lien-a-propos")
 pageAccueil.classList.remove("lien-accueil")
