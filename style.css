@@ -1,141 +1,4 @@
-/* reset css */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* début de CSS */
+/* MISE EN PAGE */
 
 html {
     scroll-behavior: smooth;
@@ -152,6 +15,8 @@ header {
     z-index: 10;
 }
 
+/* HEADER / BARRE DE NAVIGATION */
+
 .navigation {
     display: flex;
     align-items: center;
@@ -159,13 +24,9 @@ header {
     height: 100%;
 }
 
-.navigation .logo {
-    margin-left: 20px;
-}
-
 .navigation .logo img {
     height: 70px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 #sommaire, label {
@@ -182,20 +43,21 @@ header {
     align-items: center;
 }
 
-.navigation nav ul li {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    color: #503B3D;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
 .navigation nav ul li a {
     text-decoration: none;
     color: #503B3D;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
 }
 
+/* AJOUT DE CLASSE page-lien-a-propos JS */
+/* AJOUT DE CLASSE page-lien-accueil JS */
 .navigation nav ul .lien-accueil a,
+.navigation nav ul .lien-a-propos a:active,
+.navigation nav ul .lien-experiences a:active,
+.navigation nav ul .page-lien-accueil a:active,
 .navigation nav ul .page-lien-a-propos a {
     background-color: #832F25;
     color: white;
@@ -204,6 +66,7 @@ header {
     border-radius: 10px;
 }
 
+/*  AJOUT DE CLASSE page-lien-accueil JS */
 .navigation nav ul .lien-a-propos a:hover,
 .navigation nav ul .lien-experiences a:hover,
 .page-lien-accueil a:hover {
@@ -214,16 +77,7 @@ header {
     border-radius: 10px;
 }
 
-.navigation nav ul .lien-a-propos a:active,
-.navigation nav ul .lien-experiences a:active,
-.page-lien-accueil a:active {
-    background-color: #832F25;
-    color: white;
-    font-weight: 100;
-    padding: 10px;
-    border-radius: 10px;
-}
-
+/* PAGE D'ACCUEIL */
 main {
     z-index: 0;
 }
@@ -233,7 +87,7 @@ main .page-accueil {
     justify-content: space-between;
     align-items: center;
     margin: 0 40px;
-    height: 90vh;
+    height: 100%;
     max-height: 100%;
 }
 
@@ -257,7 +111,7 @@ main .page-accueil .image-accueil .message-bienvenue {
     top: 5px;
     right: 50px;
     text-align: right;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 main .page-accueil .metier {
@@ -278,6 +132,7 @@ main .page-accueil .metier span {
     text-transform: uppercase;
 }
 
+/* ANIMATION / APPARITION */
 @keyframes ApparitionTexte {
 0% {
     opacity: 0;
@@ -286,7 +141,6 @@ main .page-accueil .metier span {
 100% {
     opacity: 1;
 }
-
 }
 
 .metier,
@@ -294,10 +148,10 @@ main .page-accueil .metier span {
     animation: ApparitionTexte 3s ease-in-out;
   }
   
-/* début page à propos */
+/* PAGE À-PROPOS */
 
 main #page_a_propos {
-    height: 90vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     background: linear-gradient(135deg, #503B3D 5%, rgba(0, 0, 0, 0) 0%), linear-gradient(-45deg, #503B3D 25%, rgba(0, 0, 0, 0) 0%)
@@ -308,16 +162,16 @@ main #page_a_propos .presentation {
     width: 25vw;
     margin-top: 70px;
     text-align: justify;
-    font-size: 1.4rem;
     padding: 5px 10px;
     background-color: #503B3D;
-    color: #f8f7f2;
-    font-family: 'Archivo Narrow', sans-serif;
     border-radius: 20px;
 }
 
 main #page_a_propos .presentation p {
     margin: 2vh 3vw;
+    color: #f8f7f2;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.4rem;
 }
 
 main #page_a_propos .presentation .centrer {
@@ -388,7 +242,6 @@ main #page_a_propos .bloc_page_a_propos .redBloc i {
     margin-right: 5px;
 }
 
-
 main #page_a_propos .prenom {
     display: flex;
     flex-direction: column;
@@ -397,58 +250,68 @@ main #page_a_propos .prenom {
     margin-left: 20px;
     margin-top: 15px;
     background-color: #F5EBE0;
-    font-size: 2.3rem;
-    color: #503B3D;
-    font-family: 'Archivo Narrow', sans-serif;
-    line-height: initial;
-    letter-spacing: 2px;
     border-radius: 20px;
 }
 
 main #page_a_propos .prenom p {
 margin-left: 20px;
+font-size: 2.3rem;
+color: #503B3D;
+font-family: 'Archivo Narrow', sans-serif;
+line-height: initial;
+letter-spacing: 2px;
 }
 
-/* fin page à propos */
+/* RESPONSIVE */
+/* PAGE ACCUEIL - MESSAGE BIENVENUE */
+@media screen and (max-width:980px) {
+    main .page-accueil .image-accueil .message-bienvenue {
+        margin-left: 120px;
+    }
+}
 
+/* PAGE À PROPOS - PRÉSENTATION */
 @media screen and (min-width: 781px) {
 
     @media screen and (min-height: 500px){
-    main #page_a_propos .presentation {
+    main #page_a_propos .presentation p {
         font-size: 1.1rem;
     }
     }
 
     @media screen and (min-height: 800px){
-        main #page_a_propos .presentation {
+        main #page_a_propos .presentation p {
             font-size: 1.4rem;
     }
     }
 
     @media screen and (min-height: 1200px){
-        main #page_a_propos .presentation {
+        main #page_a_propos .presentation p {
             font-size: 1.6rem;
     }
     }
 }
-
+/* GLOBAL */
 @media screen and (max-width: 780px) {
 
-.navigation {
-    position: relative;
-}
-
-.navigation nav ul {
+.navigation nav ul,
+#sommaire:checked ~ nav ul {
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    left: -100%;
     height: 85vh;
     width: 100%;
     transition: 1s;
     background-color: #F5EBE0;
-    margin-top: 7vh;
+    margin-top: 7.5vh;
+}
+
+.navigation nav ul {
+    left: -100%;
+}
+#sommaire:checked ~ nav ul {
+    left: 0;
 }
 
 .navigation nav ul .lien-a-propos a:hover,
@@ -480,19 +343,6 @@ label i {
     font-size: 2.5em;
 }
 
-#sommaire:checked ~ nav ul {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    left: 0;
-    height: 85vh;
-    width: 100%;
-    transition: all 1s;
-    margin-top: 7vh;
-    background-color: #F5EBE0;
-}
-
 main .page-accueil {
     display: block;
     margin: 0;
@@ -504,22 +354,6 @@ main .page-accueil .metier {
     top: 50%;
     right: 50px;
 }
-
-@keyframes ApparitionTexte {
-    0% {
-        opacity: 0;
-    }
-    
-    100% {
-        opacity: 1;
-    }
-    
-    }
-    
-.metier,
-.page-accueil .image-accueil .message-bienvenue {
-    animation: ApparitionTexte 3s ease-in-out;
-    }
 
 main .page-accueil .image-accueil img {
     clip-path: none;
@@ -547,13 +381,15 @@ main #page_a_propos .presentation p {
 main #page_a_propos .bloc_page_a_propos {
     position: absolute;
     width: 100vw;
-    height: 85vh;
+    /* height: 85vh; */
+    height: 100%;
     margin-right: 0;
 }
 
 main #page_a_propos .bloc_page_a_propos .titre_photo {
     display: block;
-    height: 85vh;
+    /* height: 85vh; */
+    height: 100%;
     position: relative;
     margin-top: 0;
 }
@@ -590,27 +426,26 @@ main #page_a_propos .bloc_page_a_propos .redBloc {
 }
 
 @media screen and (min-height: 800px) {
-main #page_a_propos .presentation {
+main #page_a_propos .presentation p {
     font-size: 1.6rem;
 } 
 }
 
 @media screen and (min-height: 900px){
-main #page_a_propos .presentation {
+main #page_a_propos .presentation p {
     font-size: 1.7rem;
 }
 }
 
 @media screen and (min-height: 1000px){
-    main #page_a_propos .presentation {
+    main #page_a_propos .presentation p {
         font-size: 2rem;
     }
     }
 
 @media screen and (max-width: 300px){
-    main #page_a_propos .presentation {
+    main #page_a_propos .presentation p {
         font-size: 1.1rem;
     }
     }
-    
 }
