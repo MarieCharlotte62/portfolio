@@ -54,11 +54,11 @@ header {
 
 /* AJOUT DE CLASSE page-lien-a-propos JS */
 /* AJOUT DE CLASSE page-lien-accueil JS */
-.navigation nav ul .lien-accueil a,
-.navigation nav ul .lien-a-propos a:active,
-.navigation nav ul .lien-experiences a:active,
-.navigation nav ul .page-lien-accueil a:active,
-.navigation nav ul .page-lien-a-propos a {
+header .navigation nav ul .lien-accueil a,
+header .navigation nav ul .lien-a-propos a:active,
+header .navigation nav ul .lien-experiences a:active,
+header .navigation nav ul .page-lien-accueil a:active,
+header .navigation nav ul .page-lien-a-propos a {
     background-color: #832F25;
     color: white;
     font-weight: 100;
@@ -71,6 +71,7 @@ header {
 .navigation nav ul .lien-experiences a:hover,
 .page-lien-accueil a:hover {
     background-color:white;
+    color: #503B3D;
     font-weight: 100;
     font-weight: 800;
     padding: 10px;
@@ -270,6 +271,7 @@ letter-spacing: 2px;
     }
 }
 
+/* RESPONSIVE */
 /* PAGE À PROPOS - PRÉSENTATION */
 @media screen and (min-width: 781px) {
 
@@ -291,6 +293,8 @@ letter-spacing: 2px;
     }
     }
 }
+
+/* RESPONSIVE */
 /* GLOBAL */
 @media screen and (max-width: 780px) {
 
@@ -357,6 +361,10 @@ main .page-accueil .metier {
 
 main .page-accueil .image-accueil img {
     clip-path: none;
+}
+
+main .page-accueil .image-accueil .message-bienvenue {
+    margin-left: 30px;
 }
 
 main #page_a_propos {
